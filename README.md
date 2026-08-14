@@ -47,3 +47,5 @@
 
 - V17: finalen LinkedIn-Link ergänzt
 - V17: finalen Lebenslauf als PDF eingebunden und Kontakt-Link aktiviert
+
+- V18: Cloudflare Web Analytics in alle HTML-Seiten eingebunden
