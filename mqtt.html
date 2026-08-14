@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="MQTT-Netzwerkprojekt für den Winterball – Synchronisation von Spotify und PowerPoint über zwei PCs.">
+<title>Winterball MQTT Netzwerk — Leon Stein</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="index.html#home">LS<span>.</span></a>
+  <nav>
+    <a class="nav-link" href="index.html#home"><span class="icon">⌂</span><b>Home</b></a>
+    <a class="nav-link" href="index.html#current"><span class="icon">●</span><b>Current</b></a>
+    <a class="nav-link active" href="index.html#projects"><span class="icon">◈</span><b>Projekte</b></a>
+    <a class="nav-link" href="index.html#about"><span class="icon">○</span><b>Über mich</b></a>
+    <a class="nav-link" href="index.html#skills"><span class="icon">◇</span><b>Skills</b></a>
+    <a class="nav-link" href="index.html#github"><span class="icon">◉</span><b>GitHub</b></a>
+    <a class="nav-link" href="index.html#contact"><span class="icon">✉</span><b>Kontakt</b></a>
+  </nav>
+  <div class="side-bottom">2026<br>PROJECT 04</div>
+</aside>
+
+<main class="detail-main">
+  <div class="detail-top"><a href="index.html#projects">← ZURÜCK ZU DEN PROJEKTEN</a><span>NETWORKING / AUTOMATION</span></div>
+
+  <section class="mqtt-hero page-section" style="padding-left:0;padding-right:0">
+    <div class="mqtt-hero-grid">
+      <div class="mqtt-hero-copy">
+        <div class="eyebrow"><span></span> 04 / WINTERBALL MQTT NETWORK</div>
+        <h1>Winterball MQTT<br><em>Netzwerk.</em></h1>
+        <p>Beim Winterball musste die Musik unten in der Aula laufen, während der Beamer und der Präsentations-PC im ersten Stock standen. Um trotzdem Songtitel und Tanzart live synchron anzuzeigen, entstand ein verteiltes System aus zwei PCs, Spotify-Auslesung und einem MQTT-Netzwerk.</p>
+        <div class="tags large-tags"><span>MQTT</span><span>Python</span><span>Spotify</span><span>PowerPoint</span><span>Automation</span></div>
+      </div>
+      <div class="mqtt-arch-card">
+        <div class="mqtt-arch-level left">
+          <span class="mqtt-level-title">AULA / ERDGESCHOSS</span>
+          <strong>Musik-PC</strong>
+          <p>Spotify abspielen und aktuellen Song erkennen</p>
+        </div>
+        <div class="mqtt-arch-broker">
+          <span>MQTT</span>
+          <strong>Broker</strong>
+          <p>Song- bzw. Folieninformation im Netzwerk übertragen</p>
+        </div>
+        <div class="mqtt-arch-level right">
+          <span class="mqtt-level-title">BEAMER / 1. STOCK</span>
+          <strong>Präsentations-PC</strong>
+          <p>PowerPoint automatisch auf die passende Folie wechseln</p>
+        </div>
+        <i class="mqtt-arrow a1"></i>
+        <i class="mqtt-arrow a2"></i>
+      </div>
+    </div>
+  </section>
+
+  <section class="school-confirmation mqtt-status"><div class="confirmation-mark">●</div><div><strong>Schulisches Live-Projekt</strong><p>Das System wurde für eine reale Veranstaltung an der Schule entwickelt. Es löste das praktische Problem, Musik und Präsentation über zwei Stockwerke hinweg zuverlässig miteinander zu synchronisieren.</p></div></section>
+
+  <section class="case-section" style="padding-left:0;padding-right:0">
+    <div class="case-intro"><div><div class="eyebrow"><span></span> 01 / AUSGANGSLAGE</div><div class="case-number">RÄUMLICHE TRENNUNG</div></div><div class="case-copy"><h2>Zwei Stockwerke machten ein verteiltes System notwendig.</h2><p>Die Musik lief unten in der Aula, während der Beamer mit der Präsentation im ersten Stock aufgebaut war. Ein einzelner Rechner war dadurch unpraktisch, weil Musiksteuerung und Folienanzeige nicht am gleichen Ort benötigt wurden.</p><p>Benötigt wurde daher eine Lösung, bei der ein Rechner den aktuellen Song erkennt und ein zweiter Rechner daraus die passende Präsentationsaktion ausführt. Genau diese Trennung wurde über MQTT umgesetzt.</p></div></div>
+      <div class="mqtt-problem-grid">
+        <div class="mqtt-problem-card"><span>ERDGESCHOSS</span><strong>Musik-PC</strong><p>Spotify-Wiedergabe für den Winterball unten in der Aula.</p></div>
+        <div class="mqtt-problem-card"><span>1. STOCK</span><strong>Beamer-PC</strong><p>PowerPoint zeigte Songtitel und den passenden Tanz wie Tango oder Discofox.</p></div>
+      </div>
+  </section>
+
+  <section class="case-section mqtt-alt" style="padding-left:0;padding-right:0">
+    <div class="case-intro"><div><div class="eyebrow"><span></span> 02 / ARCHITEKTUR</div><div class="case-number">SENDER → BROKER → EMPFÄNGER</div></div><div class="case-copy"><h2>Die Kommunikation wurde sauber in Publisher und Subscriber getrennt.</h2><p>Der Musik-PC veröffentlichte die relevanten Informationen im MQTT-Netzwerk. Der Präsentations-PC abonnierte diese Nachrichten und leitete daraus die passenden Folienwechsel ab. Dadurch waren beide Systeme entkoppelt und trotzdem synchron.</p><p>Als Vermittler diente ein Mosquitto-Broker. Dieses Prinzip machte die Lösung einfach, robust und gut nachvollziehbar.</p></div></div>
+      <div class="mqtt-architecture-grid">
+        <div class="mqtt-flow-card">
+          <div class="mqtt-flow-step"><span>01</span><strong>Spotify erkennen</strong><p>Der Sender liest den aktuellen Song aus.</p></div>
+          <div class="mqtt-flow-step"><span>02</span><strong>MQTT senden</strong><p>Die zugehörige Foliennummer wird als Nachricht veröffentlicht.</p></div>
+          <div class="mqtt-flow-step"><span>03</span><strong>PowerPoint wechseln</strong><p>Der Empfänger verarbeitet die Nachricht und wechselt die Folie.</p></div>
+        </div>
+        <figure class="mqtt-console"><img src="assets/mqtt/broker_console.png" alt="Mosquitto Broker in der Windows-Konsole"><figcaption>Mosquitto-Broker als zentrale Vermittlungsstelle im Netzwerk</figcaption></figure>
+      </div>
+    </section>
+
+  <section class="case-section" style="padding-left:0;padding-right:0">
+    <div class="case-intro"><div><div class="eyebrow"><span></span> 03 / SENDER</div><div class="case-number">SPOTIFY & FOLIENZUORDNUNG</div></div><div class="case-copy"><h2>Der Sender-PC erkannte den Song und entschied, ob eine passende Folie gesendet werden kann.</h2><p>Auf dem Musik-PC lief eine eigene Python-Anwendung, die den aktuellen Spotify-Song ausliest. Existierte für den Titel eine Folienzuordnung, wurde die entsprechende Information an das MQTT-Netzwerk gesendet. Andernfalls wurde klar angezeigt, dass für den aktuellen Song keine Folie vorhanden ist.</p><p>So blieb jederzeit nachvollziehbar, ob gerade ein Titel nur abgespielt wird oder bereits aktiv an die Präsentation übergeben wurde.</p></div></div>
+      <div class="mqtt-shot-grid sender-grid">
+        <figure><img src="assets/mqtt/sender_waiting.png" alt="Sender ohne passende Folienzuordnung"><figcaption>Senderstatus: Song erkannt, aber noch ohne Folienzuordnung</figcaption></figure>
+        <figure><img src="assets/mqtt/sender_sent.png" alt="Sender sendet Folie 1"><figcaption>Senderstatus: passende Folie erkannt und an MQTT gesendet</figcaption></figure>
+      </div>
+    </section>
+
+  <section class="case-section mqtt-alt" style="padding-left:0;padding-right:0">
+    <div class="case-intro"><div><div class="eyebrow"><span></span> 04 / EMPFÄNGER</div><div class="case-number">POWERPOINT-STEUERUNG</div></div><div class="case-copy"><h2>Der Empfänger abonnierte die Befehle und übertrug sie in die Präsentation.</h2><p>Auf dem Präsentations-PC lief die Empfänger-Anwendung. Sie verband sich mit dem MQTT-Broker, abonnierte das passende Topic und zeigte empfangene Folienbefehle direkt an. Diese Informationen konnten anschließend genutzt werden, um die vorbereitete PowerPoint auf den richtigen Songtitel mit der passenden Tanzart umzuschalten.</p><p>Damit wurde aus einer Netzwerk-Nachricht direkt eine sichtbare Änderung im Live-Betrieb der Veranstaltung.</p></div></div>
+      <div class="mqtt-shot-grid receiver-grid">
+        <figure><img src="assets/mqtt/receiver_connected.png" alt="Empfänger mit MQTT-Broker verbunden"><figcaption>Empfänger verbunden und auf das Topic <code>winterball/folie</code> abonniert</figcaption></figure>
+        <figure><img src="assets/mqtt/receiver_logs.png" alt="Empfangene Folienbefehle im Empfänger"><figcaption>Laufende Empfangsprotokolle der Folienbefehle</figcaption></figure>
+      </div>
+    </section>
+
+  <section class="case-section" style="padding-left:0;padding-right:0">
+    <div class="case-intro"><div><div class="eyebrow"><span></span> 05 / TECHNIK</div><div class="case-number">IMPLEMENTIERUNG & LEARNINGS</div></div><div class="case-copy"><h2>Das Projekt verbindet API-Nutzung, Netzwerkkommunikation und Live-Automation.</h2><p>Technisch interessant war vor allem die Kombination verschiedener Ebenen: Spotify wurde zur Musikerkennung genutzt, MQTT übernahm den Nachrichtentransport, und auf der Empfängerseite wurde daraus eine konkrete Präsentationsaktion abgeleitet. Damit entstand ein kleines, aber sehr anschauliches verteiltes System.</p><p>Den damaligen Code habe ich inzwischen zusätzlich an eine neuere Version von <code>paho-mqtt</code> angepasst, sodass das Projekt auch mit aktuellem Stand wieder sauber läuft. Über den GitHub-Link am Ende der Seite kann der Code später direkt eingesehen werden.</p></div></div>
+      <div class="tech-points">
+        <div class="tech-point"><span>01</span><h3>Zwei-PC-System</h3><p>Sender und Empfänger sind räumlich getrennt und erfüllen unterschiedliche Aufgaben.</p></div>
+        <div class="tech-point"><span>02</span><h3>MQTT</h3><p>Publisher/Subscriber-Prinzip zur sauberen und entkoppelten Übertragung von Zustandsinformationen.</p></div>
+        <div class="tech-point"><span>03</span><h3>Python</h3><p>Eigene Anwendungen für Song-Erkennung, Nachrichtentransfer und Live-Steuerung.</p></div>
+        <div class="tech-point"><span>04</span><h3>Systemintegration</h3><p>Verknüpfung von Spotify, Netzwerkkommunikation und PowerPoint in einer realen Veranstaltung.</p></div>
+      </div>
+    </section>
+
+  <section class="case-section" style="padding-left:0;padding-right:0">
+    <div class="result-block mqtt-result"><div><div class="eyebrow"><span></span> 06 / ERGEBNIS</div><h2>Ein verteiltes Live-System für Musik und Präsentation.</h2></div><div><p>Das MQTT-Winterballprojekt zeigt, wie mit vergleichsweise einfachen Mitteln eine praktische Live-Lösung entstehen kann: unten Musik, oben Präsentation – verbunden über ein sauberes Netzwerkprinzip. Die Zuschauer sehen Songtitel und Tanzart, während im Hintergrund Sender, Broker und Empfänger zusammenarbeiten.</p><div class="result-points"><div><strong>PROBLEM</strong><span>Musik und Präsentation mussten über zwei Stockwerke hinweg synchronisiert werden.</span></div><div><strong>LÖSUNG</strong><span>Zwei PCs mit MQTT-Kommunikation und automatischer Weitergabe der Folieninformation.</span></div><div><strong>TECHNIK</strong><span>Spotify-Auslesung, MQTT-Broker, Python-Anwendungen und PowerPoint-Automation.</span></div><div><strong>LEARNING</strong><span>Verteilte Systeme, Zustandsübertragung und die Integration mehrerer Komponenten in einem realen Einsatz.</span></div></div></div></div>
+      <div class="detail-actions"><a class="btn btn-primary" href="https://github.com/leonstein2611/winterball-mqtt" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn btn-ghost" href="index.html#projects">Weitere Projekte</a></div>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Future Club THI – Roverprojekt von Leon Stein.">
+<title>Future Club THI — Leon Stein</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="sidebar">
+<a class="brand" href="index.html#home">LS<span>.</span></a>
+<nav>
+<a class="nav-link" href="index.html#home"><span class="icon">⌂</span><b>Home</b></a>
+<a class="nav-link active" href="index.html#current"><span class="icon">●</span><b>Current</b></a>
+<a class="nav-link" href="index.html#projects"><span class="icon">◈</span><b>Projekte</b></a>
+<a class="nav-link" href="index.html#about"><span class="icon">○</span><b>Über mich</b></a>
+<a class="nav-link" href="index.html#skills"><span class="icon">◇</span><b>Skills</b></a>
+<a class="nav-link" href="index.html#github"><span class="icon">◉</span><b>GitHub</b></a>
+<a class="nav-link" href="index.html#contact"><span class="icon">✉</span><b>Kontakt</b></a>
+</nav>
+<div class="side-bottom">2026<br>PROJECT 02</div>
+</aside>
+
+<main class="detail-main">
+<div class="detail-top"><a href="index.html#current">← ZURÜCK ZU CURRENT PROJECTS</a><span>ROBOTIK / ENGINEERING</span></div>
+
+<section class="fc-hero page-section" style="padding-left:0;padding-right:0">
+<div class="fc-hero-copy">
+<div class="eyebrow"><span></span> 02 / FUTURE CLUB THI</div>
+<h1>Future Club<br><em>Rover.</em></h1>
+<p>Seit der Oberstufe arbeite ich im Future Club THI an der Entwicklung eines mobilen Rovers. Der aktuelle Schwerpunkt liegt auf der mechanischen Weiterentwicklung, der strukturierten Einteilung der Komponenten und der Umsetzung des bereits ausgearbeiteten Elektronikkonzepts.</p>
+<div class="tags large-tags"><span>Robotik</span><span>Mechanik</span><span>CAD</span><span>Elektronik</span><span>THI</span></div>
+</div>
+<div class="fc-hero-image"><img src="assets/futureclub/futureclub_05.png" alt="CAD-Modell des Rovers"></div>
+</section>
+
+<section class="school-confirmation fc-status"><div class="confirmation-mark">●</div><div><strong>Aktuelles Hochschulprojekt</strong><p>Der Rover wird im Future Club THI kontinuierlich weiterentwickelt. Mechanik und Elektronikkonzept sind bereits weit ausgearbeitet; der nächste Meilenstein ist die Steuerung des Rovers über einen ESP32-Controller.</p></div></section>
+
+<section class="case-section">
+<div class="case-intro"><div><div class="eyebrow"><span></span> 01 / MECHANIK</div><div class="case-number">KONSTRUKTION & WEITERENTWICKLUNG</div></div><div class="case-copy"><h2>Vier unabhängig ansteuerbare Achsen mit eigener Lager- und Kabelführung.</h2><p>Ein Schwerpunkt der bisherigen Arbeit lag auf der mechanischen Weiterentwicklung der vier Achsarme. Die einzelnen Achsen werden durch speziell ausgelegte Bauteile zusammengehalten: Zwei kreisförmige Platten werden miteinander verspannt und bilden die mechanische Aufnahme, während die Achse über ein Kugellager gelagert wird.</p><p>Die Arme verfügen außerdem über integrierte Kabelkanäle, sodass die Leitungen innerhalb der Konstruktion geführt werden können. Die CAD-Ansichten zeigen sowohl die Gesamtstruktur als auch den mechanischen Aufbau im Detail; die Tafel-Skizze ergänzt die zugrunde liegenden Konstruktionsüberlegungen.</p></div></div>
+<div class="fc-image-grid mech-grid">
+  <figure class="cad-large"><img src="assets/futureclub/futureclub_04.png" alt="CAD Gesamtansicht des Rovers"><figcaption>Weiterentwickelte Rover-Konstruktion</figcaption></figure>
+  <figure class="cad-large"><img src="assets/futureclub/futureclub_cutaway.png" alt="CAD Schnittmodell der Achsaufnahme"><figcaption>Schnittmodell: Platten, Verspannung und Kugellager</figcaption></figure>
+  <figure class="small-board"><img src="assets/futureclub/futureclub_greenboard_left.jpg" alt="Mechanische Planung auf grüner Tafel"><figcaption>Mechanische Planung & Konstruktionsüberlegungen</figcaption></figure>
+</div>
+</section>
+
+<section class="case-section fc-alt">
+<div class="case-intro"><div><div class="eyebrow"><span></span> 02 / SYSTEMAUFBAU</div><div class="case-number">KOMPONENTEN & BATTERIEFACH</div></div><div class="case-copy"><h2>Der Rover wurde auch hinsichtlich seiner inneren Komponenten strukturiert aufgebaut.</h2><p>Neben den vier Achsarmen wurde die Einteilung der einzelnen Komponenten geplant. Dazu gehört ein eigenes Batteriefach, das geöffnet und geschlossen werden kann. Die Anordnung schafft eine klare Trennung der Baugruppen und erleichtert den späteren Aufbau, die Wartung und die Erweiterung des Systems.</p></div></div>
+<div class="fc-image-grid build-grid">
+  <figure><img src="assets/futureclub/aktueller stand .jpeg" alt="Aufgebauter Rover"><figcaption>Praktischer Aufbau des aktuellen Prototyps</figcaption></figure>
+  <figure><img src="assets/futureclub/futureclub_07.jpg" alt="Weiterer Rover-Aufbau"><figcaption>Aufbau und Integration der Komponenten</figcaption></figure>
+</div>
+</section>
+
+<section class="case-section">
+<div class="case-intro"><div><div class="eyebrow"><span></span> 03 / ELEKTRONIK</div><div class="case-number">SYSTEMARCHITEKTUR</div></div><div class="case-copy"><h2>Das elektronische Gesamtkonzept ist bereits ausgearbeitet.</h2><p>Die elektronische Architektur des Rovers wurde vollständig konzipiert. Alle Komponenten besitzen einen festen Platz im System, sodass die Einteilung klar strukturiert bleibt. Zusätzlich ist die Versorgung in zwei Stromkreisläufe aufgeteilt: einen für die Motoren und einen separaten Bereich für die Feinelektronik und Steuerung.</p><p>Die weiße Tafel zeigt die erarbeitete Systemübersicht und bildet die Grundlage für die spätere praktische Umsetzung.</p></div></div>
+<div class="fc-image-grid single"><figure><img src="assets/futureclub/futureclub_01.jpg" alt="Elektronisches Gesamtkonzept auf dem Whiteboard"><figcaption>Elektronisches Gesamtkonzept</figcaption></figure></div>
+<div class="fc-system-box"><div class="fc-system-core">ROVER<br><small>Systemarchitektur</small></div><div class="fc-system-row"><span>MOTOR-KREIS</span><span>FEINELEKTRONIK</span><span>MIKROCONTROLLER</span><span>SENSOREN / AKTOREN</span></div><p>Alle Teile besitzen einen festen Platz. Die Trennung von Motorversorgung und Feinelektronik bildet die Grundlage für einen robusten weiteren Aufbau.</p></div>
+</section>
+
+<section class="case-section fc-alt">
+<div class="case-intro"><div><div class="eyebrow"><span></span> 04 / SOFTWARE</div><div class="case-number">AKTUELLER ENTWICKLUNGSSTAND</div></div><div class="case-copy"><h2>Die Softwareentwicklung startet mit der manuellen Rover-Steuerung.</h2><p>Mit der Programmierung befinden wir uns aktuell noch am Anfang. Für den nächsten Schritt wird ein weiterer Motor benötigt, um die Steuerung praktisch erproben zu können. Der nächste Meilenstein ist deshalb die Steuerung des Rovers über einen Controller mit einem ESP32.</p><p>Perspektivisch soll der Raspberry Pi 5 die übergeordnete Rechenplattform bilden und anschließend auch ROS-basierte Operationen ermöglichen.</p></div></div>
+<div class="fc-progress"><div><span>MECHANIK</span><b>WEIT FORTGESCHRITTEN</b><i><em style="width:86%"></em></i></div><div><span>ELEKTRONIKKONZEPT</span><b>AUSGEARBEITET</b><i><em style="width:100%"></em></i></div><div><span>ESP32-STEUERUNG</span><b>NÄCHSTER MEILENSTEIN</b><i><em class="pending" style="width:15%"></em></i></div><div><span>RASPBERRY PI 5 / ROS</span><b>LANGFRISTIGE ERWEITERUNG</b><i><em class="pending" style="width:4%"></em></i></div></div>
+</section>
+
+<section class="case-section">
+<div class="case-intro"><div><div class="eyebrow"><span></span> 05 / TEAMWORK</div><div class="case-number">ORGANISATION & KOMMUNIKATION</div></div><div class="case-copy"><h2>Technische Entwicklung funktioniert nur mit guter Abstimmung im Team.</h2><p>Parallel zur technischen Arbeit spielt die Organisation im Team eine wichtige Rolle. Für die Abstimmung nutzen wir unter anderem Discord- und WhatsApp-Kanäle, um Aufgaben, Fortschritte und nächste Entwicklungsschritte strukturiert zu koordinieren.</p><p>Dadurch werden nicht nur technische Inhalte aufgeteilt, sondern auch Teamleitungs- und Kommunikationsfähigkeiten sichtbar, die für ein laufendes Robotikprojekt entscheidend sind.</p></div></div>
+<div class="team-grid">
+  <figure class="team-shot"><img src="assets/futureclub/futureclub_discord.png" alt="Discord-Struktur des Future Club Teams"><figcaption>Discord-Server mit thematisch getrennten Kanälen für Mechanik, Elektronik, Software und Organisation</figcaption></figure>
+  <div class="team-points">
+    <div><strong>Kommunikation</strong><span>Abstimmung über Discord und WhatsApp für schnelle Rückfragen und laufende Updates.</span></div>
+    <div><strong>Struktur</strong><span>Getrennte Kanäle erleichtern die Aufteilung in Mechanik, Elektronik, Software und Organisation.</span></div>
+    <div><strong>Teamarbeit</strong><span>Technische Entwicklung und Koordination greifen ineinander und fördern Verantwortungsübernahme im Projekt.</span></div>
+  </div>
+</div>
+</section>
+
+<section class="case-section">
+<div class="result-block fc-result"><div><div class="eyebrow"><span></span> 06 / ENTWICKLUNG</div><h2>Vom mechanischen Konzept zum vollständigen Robotersystem.</h2></div><div><p>Der Future Club Rover verbindet mechanische Konstruktion, Elektronik, Teamarbeit und zukünftige Softwareentwicklung in einem laufenden Systemprojekt. Besonders wichtig ist dabei die schrittweise Entwicklung: erst die mechanische Basis, dann die Elektronik und anschließend die manuelle Steuerung über einen Controller sowie spätere ROS-basierte Erweiterungen.</p><div class="result-points"><div><strong>MECHANIK</strong><span>Vier unabhängig ansteuerbare Achsarme, Kugellagerungen, verspannte Kreisplatten und integrierte Kabelkanäle.</span></div><div><strong>ELEKTRONIK</strong><span>Zwei getrennte Stromkreisläufe, feste Komponentenplätze und ausgearbeitetes Gesamtkonzept.</span></div><div><strong>TEAMWORK</strong><span>Koordination über Discord und WhatsApp mit klarer Aufgabenstruktur innerhalb des Projekts.</span></div></div></div></div>
+</section>
+<div class="detail-actions"><a class="btn btn-primary" href="index.html#current">Current Projects</a><a class="btn btn-ghost" href="index.html#projects">Weitere Projekte</a></div>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

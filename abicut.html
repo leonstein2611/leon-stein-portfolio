@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="AbiCut – Softwareprojekt von Leon Stein.">
+<title>AbiCut — Leon Stein</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<aside class="sidebar">
+<a class="brand" href="index.html#home">LS<span>.</span></a>
+<nav>
+<a class="nav-link" href="index.html#home"><span class="icon">⌂</span><b>Home</b></a>
+<a class="nav-link" href="index.html#current"><span class="icon">●</span><b>Current</b></a>
+<a class="nav-link active" href="index.html#projects"><span class="icon">◈</span><b>Projekte</b></a>
+<a class="nav-link" href="index.html#about"><span class="icon">○</span><b>Über mich</b></a>
+<a class="nav-link" href="index.html#skills"><span class="icon">◇</span><b>Skills</b></a>
+<a class="nav-link" href="index.html#github"><span class="icon">◉</span><b>GitHub</b></a>
+<a class="nav-link" href="index.html#contact"><span class="icon">✉</span><b>Kontakt</b></a>
+</nav>
+<div class="side-bottom">2026<br>PROJECT 01</div>
+</aside>
+
+<main class="detail-main">
+<div class="detail-top"><a href="index.html#projects">← ZURÜCK ZU DEN PROJEKTEN</a><span>SOFTWARE / AUTOMATION</span></div>
+
+<section class="page-section abicut-hero" style="padding-left:0;padding-right:0">
+  <div class="abicut-hero-grid">
+    <div class="abicut-hero-copy">
+      <div class="eyebrow"><span></span> 01 / ABICUT</div>
+      <h1>AbiCut<span>.</span></h1>
+      <p>Eine vollständige Desktop-Anwendung zur Vorbereitung, Steuerung und Überwachung von Musik und Präsentationsfolien bei einer Live-Veranstaltung.</p>
+      <div class="tags large-tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>PowerPoint</span><span>JSON</span></div>
+    </div>
+    <div class="abicut-hero-shot"><img src="assets/abicut/abicut_logo.png" alt="AbiCut Logo"><div class="abicut-caption">AbiCut / schulisch bestätigtes Projekt</div></div>
+  </div>
+</section>
+
+<section class="school-confirmation"><div class="confirmation-mark">✓</div><div><strong>Schulisch bestätigt</strong><p>AbiCut wurde für die Abiturverleihung entwickelt, als fertige Anwendung an die Schule übergeben und durch die Schule bestätigt. Eine offizielle schriftliche Bestätigung wird zusätzlich als Bewerbungsnachweis ausgestellt.</p></div></section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="case-intro"><div><div class="eyebrow"><span></span> AUSGANGSLAGE</div><div class="case-number">01 / PROBLEM</div></div>
+  <div class="case-copy"><h2>Musik und Präsentation zuverlässig miteinander verbinden.</h2><p>Bei der Abiturverleihung sollte zu den einzelnen Präsentationsfolien jeweils ein definierter Ausschnitt eines Songs abgespielt werden. Dafür mussten Songs vorbereitet, Startpunkte und Dauer festgelegt und die Abläufe während der Veranstaltung zuverlässig kontrolliert werden.</p><p>Aus dieser konkreten Anforderung entstand AbiCut – zunächst als kleines Tool und anschließend als vollständige Desktop-Anwendung mit Projektverwaltung, Editor, Spotify-Anbindung und Live Controller.</p></div></div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> PROJEKT-ASSISTENT</div>
+  <div class="case-copy" style="margin-top:16px;max-width:820px"><h2>Ein neues Projekt lässt sich in wenigen Schritten einrichten.</h2><p>Der Projekt-Assistent bündelt die benötigten Eingaben: Projektname, Klassenliste und Spotify-Playlist. Eine Klassenliste kann als Excel-Datei über die Datei-/Ordnerauswahl eingebunden werden, die Spotify-Playlist wird über ihren Link importiert. Die Anwendung übernimmt anschließend die Zuordnung und legt die Projektstruktur an.</p></div>
+  <div class="case-grid assistant-grid">
+    <div class="case-card"><img src="assets/abicut/new project.png" alt="AbiCut Projekt-Assistent"><div class="case-meta"><strong>Projekt-Assistent</strong><span>Klassenliste auswählen und Spotify-Playlist per Link hinterlegen</span></div></div>
+    <div class="case-card narrow-shot"><img src="assets/abicut/schüler import.png" alt="AbiCut erfolgreich erstelltes Projekt"><div class="case-meta"><strong>Projekt erstellt</strong><span>Importierte Schüler- und Projektdaten werden zusammengeführt</span></div></div>
+    <div class="case-card narrow-shot"><img src="assets/abicut/playlist import.png" alt="AbiCut erfolgreich importierte Playlist"><div class="case-meta"><strong>Playlist importiert</strong><span>Songs werden automatisch den passenden Einträgen zugeordnet</span></div></div>
+  </div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> PROJEKTMANAGER</div>
+  <div class="case-intro" style="margin-top:16px"><div class="case-copy"><h2>Mehrere Projekte bleiben übersichtlich verwaltbar.</h2></div><div class="case-copy"><p>Im Projektmanager können unterschiedliche Projekte geöffnet, umbenannt, dupliziert oder gelöscht werden. Gleichzeitig werden wichtige Projektinformationen und der aktuelle Fortschritt angezeigt – ähnlich wie im Hauptmenü. So ist auf einen Blick erkennbar, wie weit ein Projekt vorbereitet ist und ob noch Einträge bearbeitet werden müssen.</p></div></div>
+  <div class="case-grid manager-grid" style="margin-top:45px"><div class="case-card"><img src="assets/abicut/startscreen.png" alt="AbiCut Hauptmenü mit aktuellem Projekt und Fortschritt"><div class="case-meta"><strong>Startscreen</strong><span>Aktuelles Projekt, Fortschritt und Vorbereitungsstatus</span></div></div><div class="case-card"><img src="assets/abicut/project manager.png" alt="AbiCut Projektmanager mit Fortschrittsanzeige"><div class="case-meta"><strong>Projektmanager</strong><span>Mehrere Projekte verwalten und Fortschritt je Projekt einsehen</span></div></div></div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="case-intro"><div><div class="eyebrow"><span></span> MUSIK & FOLIEN</div><div class="case-number">02 / EDITOR</div></div><div class="case-copy"><h2>Song und Zeitausschnitt werden gezielt bestätigt.</h2><p>Im Editor wird festgelegt, welcher Ausschnitt eines Spotify-Tracks zu einer Folie gehört. Neben Startzeit, Dauer und Fades gibt es bewusst mehrere Kontrollschritte: Die aktuelle Spotify-Position kann übernommen, Start und Ende können gesetzt und der Ausschnitt per Testwiedergabe überprüft werden. Zusätzlich lässt sich die Folie explizit aktivieren. So kann vor dem Speichern kontrolliert werden, dass der richtige Song und der gewünschte Zeitausschnitt bestätigt sind.</p></div></div>
+  <div class="case-card wide" style="margin-top:45px"><img src="assets/abicut/cutting menu.png" alt="AbiCut Editor Übersicht"><div class="case-meta"><strong>Editor / Gesamtübersicht</strong><span>Folien, Songs, Konfiguration und Wiedergabeposition in einer Oberfläche</span></div></div>
+  <div class="case-card wide editor-detail-card" style="margin-top:25px"><img src="assets/abicut/editing window.png" alt="AbiCut Folie bearbeiten mit Kontrollfunktionen"><div class="case-meta"><strong>Folie bearbeiten / Kontrollinstanzen</strong><span>Spotify-Position übernehmen, Start und Ende setzen, Test Play und Aktivierungsstatus</span></div></div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> EINSTELLUNGEN & INTEGRATION</div>
+  <div class="case-copy" style="margin-top:16px;max-width:820px"><h2>Die Spotify-Anbindung und Standardwerte bleiben zentral konfigurierbar.</h2><p>Die Einstellungen bündeln die für die Anwendung relevanten Spotify-Zugangsdaten sowie Standardwerte für Startzeit, Songdauer und Fades. Dadurch können wiederkehrende Abläufe projektübergreifend vorbereitet werden.</p></div>
+  <div class="case-grid"><div class="case-card"><img src="assets/abicut/settings 1 .png" alt="AbiCut Spotify Einstellungen"><div class="case-meta"><strong>Spotify-Verbindung</strong><span>API-Zugangsdaten und Authentifizierung</span></div></div><div class="case-card"><img src="assets/abicut/settings 2.png" alt="AbiCut Standardwerte"><div class="case-meta"><strong>Standardwerte</strong><span>Startzeit, Songdauer und Fade-Einstellungen</span></div></div></div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> DATENSTRUKTUR & ARCHITEKTUR</div>
+  <div class="case-copy" style="margin-top:16px;max-width:850px"><h2>Eine klare JSON-Struktur hält Projekte nachvollziehbar und reproduzierbar.</h2><p>Die Projektinformationen werden strukturiert in JSON-Konfigurationen abgelegt. Dadurch lassen sich Schüler, Folien, Songs, Zeitausschnitte und weitere Einstellungen eindeutig zuordnen und ein Projekt kann zuverlässig gespeichert und wieder geladen werden.</p></div>
+  <div class="architecture" style="margin-top:50px">
+    <div class="arch-title">SYSTEM OVERVIEW / ABICUT</div>
+    <div class="arch-flow"><div class="arch-node accent"><strong>Main / StartScreen</strong><small>App Entry · Navigation</small></div><div class="arch-arrow">→</div><div class="arch-node accent"><strong>GUI / Editor</strong><small>Folien · Songs · Segmente</small></div>
+      <div class="arch-row"><div class="arch-node"><strong>Project Layer</strong><small>Controller · Manager · Wizard</small></div><div class="arch-arrow">↔</div><div class="arch-node"><strong>Spotify Layer</strong><small>Connection · Controller</small></div><div class="arch-arrow">↔</div><div class="arch-node"><strong>Live Layer</strong><small>LiveController · Monitor</small></div></div>
+      <div class="arch-sub"><div class="arch-node"><strong>JSON / Config</strong><small>Projektpersistenz</small></div><div class="arch-node"><strong>Utils</strong><small>Zeit / Daten</small></div><div class="arch-node"><strong>PowerPoint</strong><small>Live-Präsentation</small></div></div>
+    </div>
+    <div class="arch-note">Die Darstellung zeigt die funktionalen Bereiche. Die Klassenstruktur darunter ist bewusst als technische Vertiefung verfügbar.</div>
+  </div>
+  <details class="class-details"><summary>TECHNISCHE VERTIEFUNG — KLASSENSTRUKTUR ANZEIGEN</summary><pre><code>BaseWindow
+├── StartScreen
+├── GUI
+├── SlideEditor
+├── SettingsWindow
+├── ProjectManager
+├── ProjectWizard
+└── Monitor
+
+Main → StartScreen
+StartScreen → ProjectController / SpotifyConnection
+GUI → SlideEditor / SpotifyController / Utils
+LiveController → Monitor / SpotifyController
+ProjectWizard → ProjectController
+ProjectManager → ProjectController
+ProjectController → ProjectStatistics
+SettingsWindow → SettingsManager
+SpotifyController → SpotifyConnection</code></pre></details>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> LIVE CONTROLLER</div>
+  <div class="case-intro" style="margin-top:16px"><div class="case-copy"><h2>Während der Veranstaltung zählt Übersicht.</h2></div><div class="case-copy"><p>Der Live Controller bildet den laufenden Zustand kompakt ab: aktuelle Folie, Schüler, Song, Segment, Fortschritt und Status. Die drei Zustände zeigen den Übergang von einer deaktivierten Folie über die laufende Wiedergabe bis zu einer noch nicht konfigurierten Folie.</p></div></div>
+  <div class="case-grid live-grid"><div class="case-card"><img src="assets/abicut/live 3.png" alt="AbiCut Live Controller Folie deaktiviert"><div class="case-meta"><strong>Folie deaktiviert</strong><span>Live-Status und nächste Folie</span></div></div><div class="case-card"><img src="assets/abicut/live 2.png" alt="AbiCut Live Controller Wiedergabe"><div class="case-meta"><strong>Playing</strong><span>Aktiver Song und Fortschritt während der Wiedergabe</span></div></div><div class="case-card"><img src="assets/abicut/live 1.png" alt="AbiCut Live Controller keine Konfiguration"><div class="case-meta"><strong>Keine Konfiguration</strong><span>Fehlende Vorbereitung wird direkt sichtbar</span></div></div></div>
+</section>
+
+<section class="case-section result-section" style="padding-left:0;padding-right:0"><div class="result-panel"><div class="eyebrow"><span></span> ERGEBNIS</div><h2>Eine fertige Anwendung für den realen Einsatz.</h2><p>AbiCut verbindet Softwareentwicklung, API-Integration, strukturierte Datenhaltung, Benutzeroberfläche und Live-Steuerung in einem eigenständig entwickelten System. Die Anwendung wurde fertiggestellt, praktisch eingesetzt und von der Schule bestätigt.</p><div class="tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>JSON</span><span>PowerPoint</span></div></div></section>
+
+<div class="detail-actions"><a class="btn btn-primary" href="https://github.com/leonstein2611/Abi-Cut" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn btn-ghost" href="index.html#projects">Weitere Projekte</a></div>
+</main>
+<script src="script.js"></script>
+</body></html>
