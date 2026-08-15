@@ -589,3 +589,26 @@ body.light .about-details strong{
         width:100%;
     }
 }
+
+
+/* ---------- V21 / Mobile contact email fix ---------- */
+@media(max-width:560px){
+    .contact-section .contact-block{
+        padding-left:18px;
+        padding-right:18px;
+    }
+
+    .contact-section .contact-mail{
+        display:block;
+        width:100%;
+        max-width:100%;
+        box-sizing:border-box;
+        font-size:16px;
+        line-height:1.25;
+        letter-spacing:-0.02em;
+        white-space:normal;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+        text-align:center;
+    }
+}

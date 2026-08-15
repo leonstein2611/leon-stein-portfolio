@@ -55,3 +55,5 @@
 - V19: GitHub-Bereich für schmale Smartphone-Displays korrigiert; dekorativer Ring überdeckt den Inhalt nicht mehr
 
 - V20: E-Mail-Adresse im Kontaktbereich für schmale Smartphone-Displays responsive angepasst
+
+- V21: Mobile-Kontaktbereich korrigiert; .contact-mail auf schmalen Displays kleiner und umbrechbar gemacht
