@@ -527,3 +527,38 @@ body.light .about-details strong{
         gap:20px 18px;
     }
 }
+
+
+/* ---------- V19 / Mobile GitHub card fix ---------- */
+.dark-block > *{
+    position:relative;
+    z-index:2;
+}
+
+.dark-block:after{
+    z-index:1;
+    pointer-events:none;
+}
+
+@media(max-width:560px){
+    .github-section .dark-block{
+        padding:32px 22px;
+        overflow:hidden;
+    }
+
+    .github-section .dark-block:after{
+        display:none;
+    }
+
+    .github-section .dark-block h2{
+        font-size:clamp(32px,9.5vw,42px);
+        line-height:1.08;
+        overflow-wrap:normal;
+        word-break:normal;
+    }
+
+    .github-section .dark-block p{
+        font-size:13px;
+        line-height:1.7;
+    }
+}

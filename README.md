@@ -49,3 +49,7 @@
 - V17: finalen Lebenslauf als PDF eingebunden und Kontakt-Link aktiviert
 
 - V18: Cloudflare Web Analytics in alle HTML-Seiten eingebunden
+
+- V19: SEO-Grundlagen für leonsteinprojects.de ergänzt (individuelle Titles/Descriptions, Canonicals, Open Graph, robots.txt, sitemap.xml und strukturierte Daten)
+- V19: Startseite nennt Leon Stein + Robotik/Projekte natürlich im sichtbaren Inhalt
+- V19: GitHub-Bereich für schmale Smartphone-Displays korrigiert; dekorativer Ring überdeckt den Inhalt nicht mehr
