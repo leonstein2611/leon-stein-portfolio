@@ -562,3 +562,30 @@ body.light .about-details strong{
         line-height:1.7;
     }
 }
+
+
+/* ---------- V20 / Mobile contact email fix ---------- */
+@media(max-width:560px){
+    .contact-email,
+    .contact-card .contact-email,
+    .contact-section .contact-email{
+        display:block;
+        width:100%;
+        max-width:100%;
+        font-size:clamp(18px,5.2vw,26px);
+        line-height:1.2;
+        letter-spacing:-0.02em;
+        overflow-wrap:anywhere;
+        word-break:break-word;
+    }
+
+    .contact-card,
+    .contact-section .dark-block{
+        padding-left:22px;
+        padding-right:22px;
+    }
+
+    .contact-links{
+        width:100%;
+    }
+}

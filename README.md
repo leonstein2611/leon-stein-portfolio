@@ -53,3 +53,5 @@
 - V19: SEO-Grundlagen für leonsteinprojects.de ergänzt (individuelle Titles/Descriptions, Canonicals, Open Graph, robots.txt, sitemap.xml und strukturierte Daten)
 - V19: Startseite nennt Leon Stein + Robotik/Projekte natürlich im sichtbaren Inhalt
 - V19: GitHub-Bereich für schmale Smartphone-Displays korrigiert; dekorativer Ring überdeckt den Inhalt nicht mehr
+
+- V20: E-Mail-Adresse im Kontaktbereich für schmale Smartphone-Displays responsive angepasst
