@@ -612,3 +612,19 @@ body.light .about-details strong{
         text-align:center;
     }
 }
+
+
+/* V22 Rover update */
+.fc-image-grid.prototype-grid{grid-template-columns:1.1fr 1fr 1fr;align-items:stretch}
+.fc-image-grid.prototype-grid img{height:320px;object-fit:cover}
+.fc-image-grid.control-grid{grid-template-columns:minmax(0,760px);justify-content:start}
+.fc-image-grid.control-grid img{height:auto;max-height:480px;object-fit:contain;background:var(--panel2)}
+.rover-roadmap-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:48px}
+.rover-roadmap-step{background:var(--panel);border:1px solid var(--line);padding:22px;min-height:210px;border-radius:5px}
+.rover-roadmap-step .roadmap-number{font:600 9px "Space Grotesk";letter-spacing:.12em;color:var(--accent)}
+.rover-roadmap-step h3{font-size:17px;margin:18px 0 8px}
+.rover-roadmap-step strong{display:block;font:600 8px "Space Grotesk";letter-spacing:.1em;color:var(--green);margin-bottom:12px;text-transform:uppercase}
+.rover-roadmap-step p{font-size:11px;color:var(--muted);line-height:1.65}
+body.light .rover-roadmap-step{background:#fff;border-color:#d5dbe1}
+@media(max-width:1100px){.rover-roadmap-grid{grid-template-columns:repeat(3,1fr)}.fc-image-grid.prototype-grid{grid-template-columns:1fr 1fr}.fc-image-grid.prototype-grid figure:last-child{grid-column:1/-1;max-width:620px}}
+@media(max-width:700px){.rover-roadmap-grid{grid-template-columns:1fr}.fc-image-grid.prototype-grid{grid-template-columns:1fr}.fc-image-grid.prototype-grid figure:last-child{grid-column:auto;max-width:none}.fc-image-grid.prototype-grid img{height:260px}}

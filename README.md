@@ -1,4 +1,4 @@
-# Leon Stein Portfolio — V9
+# Leon Stein Portfolio — V22
 
 - Nutzerangepasste V8-Dateien als Basis übernommen (Index, AbiCut, Future Club, Iron-Man, Styles, Script)
 - Neues Hauptprojekt „MQTT / PowerPoint“ ergänzt
@@ -57,3 +57,11 @@
 - V20: E-Mail-Adresse im Kontaktbereich für schmale Smartphone-Displays responsive angepasst
 
 - V21: Mobile-Kontaktbereich korrigiert; .contact-mail auf schmalen Displays kleiner und umbrechbar gemacht
+
+
+- V22: Future Club Rover auf aktuellen Entwicklungsstand gebracht
+- V22: Vier neue reale Rover-Bilder eingebunden und die Rover-Vorschauen auf der Startseite aktualisiert
+- V22: CAN-Kommunikation nach Austausch eines defekten Transceivers als funktionierend dokumentiert
+- V22: Funktionierende Motorsteuerung über ESP32 und Controller ergänzt
+- V22: Nächster Meilenstein auf gezielte Einzelsteuerung der Achsarme und ersten Hindernisparcours aktualisiert
+- V22: Roadmap um Sensorik, Kamera, Raspberry Pi 5, ROS und spätere autonome Navigation erweitert
