@@ -1,4 +1,4 @@
-# Leon Stein Portfolio — V22
+# Leon Stein Portfolio — V23
 
 - Nutzerangepasste V8-Dateien als Basis übernommen (Index, AbiCut, Future Club, Iron-Man, Styles, Script)
 - Neues Hauptprojekt „MQTT / PowerPoint“ ergänzt
@@ -65,3 +65,6 @@
 - V22: Funktionierende Motorsteuerung über ESP32 und Controller ergänzt
 - V22: Nächster Meilenstein auf gezielte Einzelsteuerung der Achsarme und ersten Hindernisparcours aktualisiert
 - V22: Roadmap um Sensorik, Kamera, Raspberry Pi 5, ROS und spätere autonome Navigation erweitert
+
+- V23: BoxIt nach dem erneuten MakerWorld-Upload auf den neuen Projektlink aktualisiert
+- V23: Neues BoxIt-Coverbild als Vorschaubild auf der Website eingebunden
