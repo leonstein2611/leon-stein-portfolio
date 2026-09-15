@@ -42,8 +42,8 @@
     <div class="abicut-hero-copy">
       <div class="eyebrow"><span></span> 01 / ABICUT</div>
       <h1>AbiCut<span>.</span></h1>
-      <p>Eine vollständige Desktop-Anwendung zur Vorbereitung, Steuerung und Überwachung von Musik und Präsentationsfolien bei einer Live-Veranstaltung.</p>
-      <div class="tags large-tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>PowerPoint</span><span>JSON</span></div>
+      <p>Eine vollständige Windows-Desktop-Anwendung zur Vorbereitung, Steuerung und Überwachung von Musik und Präsentationsfolien bei einer Live-Veranstaltung – inklusive eigenem Installer, persistenten Projektdaten und robuster Live-Anbindung.</p>
+      <div class="tags large-tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>PowerPoint</span><span>JSON</span><span>PyInstaller</span><span>Inno Setup</span></div>
     </div>
     <div class="abicut-hero-shot"><img src="assets/abicut/abicut_logo.png" alt="AbiCut Logo"><div class="abicut-caption">AbiCut / schulisch bestätigtes Projekt</div></div>
   </div>
@@ -85,8 +85,25 @@
 </section>
 
 <section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> DESKTOP RELEASE / V1.0</div>
+  <div class="case-intro" style="margin-top:16px">
+    <div class="case-copy"><h2>Aus dem Python-Projekt wurde eine installierbare Windows-Anwendung.</h2></div>
+    <div class="case-copy"><p>AbiCut wird als eigenständige Desktop-Anwendung ausgeliefert. PyInstaller bündelt die Anwendung, Inno Setup übernimmt die Installation inklusive Startmenü-, Desktop- und Deinstallations-Einträgen. Dadurch kann AbiCut auf einem Ziel-PC ohne Entwicklungsumgebung installiert und direkt genutzt werden.</p><p>Die öffentliche V1.0 enthält ausschließlich anonymisierte Demo-Daten, während die Schulversion getrennt davon mit dem realen Übergabeprojekt ausgeliefert werden kann.</p></div>
+  </div>
+  <div class="case-grid desktop-release-grid">
+    <div class="case-card"><img src="assets/abicut/desktop_installer.png" alt="AbiCut Windows Installer als fertige Setup-Datei"><div class="case-meta"><strong>Windows Installer</strong><span>Fertige AbiCut-Setup-Datei für die Installation auf Zielsystemen</span></div></div>
+    <div class="case-card desktop-icon-card"><img src="assets/abicut/desktop_icon.png" alt="Installierte AbiCut Desktop-Verknüpfung"><div class="case-meta"><strong>Eigene Desktop-Anwendung</strong><span>Eigenes App-Icon, Verknüpfung und konsistentes Windows-Branding</span></div></div>
+  </div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
   <div class="eyebrow"><span></span> DATENSTRUKTUR & ARCHITEKTUR</div>
-  <div class="case-copy" style="margin-top:16px;max-width:850px"><h2>Eine klare JSON-Struktur hält Projekte nachvollziehbar und reproduzierbar.</h2><p>Die Projektinformationen werden strukturiert in JSON-Konfigurationen abgelegt. Dadurch lassen sich Schüler, Folien, Songs, Zeitausschnitte und weitere Einstellungen eindeutig zuordnen und ein Projekt kann zuverlässig gespeichert und wieder geladen werden.</p></div>
+  <div class="case-copy" style="margin-top:16px;max-width:850px"><h2>Programmdateien und Nutzerdaten sind bewusst voneinander getrennt.</h2><p>Die installierte Anwendung bleibt im Windows-Programmverzeichnis, während Einstellungen, aktuelles Projekt, Spotify-Authentifizierung und sämtliche Projektordner dauerhaft im Benutzerordner unter <code>Documents\AbiCut</code> liegen. Dadurch bleiben Projekte bei Updates oder einer Neuinstallation erhalten und können als kompletter Projektordner unkompliziert zwischen PCs übertragen werden.</p><p>Innerhalb eines Projekts werden Schüler, Folien, Songs, Zeitausschnitte und Statuswerte strukturiert in JSON gespeichert. So bleibt der Zustand nachvollziehbar und reproduzierbar.</p></div>
+  <div class="data-split" style="margin-top:45px">
+    <div class="data-split-card app-data"><span class="data-kicker">APPLICATION</span><strong>C:\Program Files\AbiCut</strong><p>Executable, interne Bibliotheken und gebündelte Ressourcen.</p><small>Kann durch Updates ersetzt werden.</small></div>
+    <div class="data-split-arrow">↔</div>
+    <div class="data-split-card user-data"><span class="data-kicker">USER DATA</span><strong>Documents\AbiCut</strong><p>settings.json · current_project.txt · .spotify_cache · projects/</p><small>Bleibt unabhängig von der Installation erhalten.</small></div>
+  </div>
   <div class="architecture" style="margin-top:50px">
     <div class="arch-title">SYSTEM OVERVIEW / ABICUT</div>
     <div class="arch-flow"><div class="arch-node accent"><strong>Main / StartScreen</strong><small>App Entry · Navigation</small></div><div class="arch-arrow">→</div><div class="arch-node accent"><strong>GUI / Editor</strong><small>Folien · Songs · Segmente</small></div>
@@ -116,12 +133,29 @@ SpotifyController → SpotifyConnection</code></pre></details>
 </section>
 
 <section class="case-section" style="padding-left:0;padding-right:0">
+  <div class="eyebrow"><span></span> POWERPOINT CONNECTION</div>
+  <div class="case-intro" style="margin-top:16px">
+    <div class="case-copy"><h2>Der Live-Modus zeigt den Zustand der Präsentation sofort sichtbar an.</h2></div>
+    <div class="case-copy"><p>Die PowerPoint-Verbindung ist bewusst fehlertolerant aufgebaut: AbiCut kann den Live-Modus auch dann öffnen, wenn noch keine Präsentation aktiv ist, und versucht anschließend automatisch erneut zu verbinden. Eine Statusanzeige macht den Zustand direkt erkennbar.</p></div>
+  </div>
+  <div class="status-led-row">
+    <div class="status-led-item"><i class="status-dot red"></i><div><strong>Nicht verbunden</strong><span>Keine aktive PowerPoint-Präsentation gefunden.</span></div></div>
+    <div class="status-led-item"><i class="status-dot amber"></i><div><strong>Bereit</strong><span>PowerPoint ist verbunden, die Bildschirmpräsentation läuft noch nicht.</span></div></div>
+    <div class="status-led-item"><i class="status-dot green"></i><div><strong>Präsentation läuft</strong><span>Live-Slideshow erkannt und Folienwechsel werden überwacht.</span></div></div>
+  </div>
+  <div class="case-grid powerpoint-grid">
+    <div class="case-card"><img src="assets/abicut/powerpoint_ready.png" alt="AbiCut Live Monitor mit PowerPoint Status Bereit"><div class="case-meta"><strong>PowerPoint: Bereit</strong><span>Orange Status-LED, solange PowerPoint verbunden ist, aber noch keine Slideshow läuft</span></div></div>
+    <div class="case-card powerpoint-warning-card"><img src="assets/abicut/powerpoint_missing.png" alt="AbiCut Hinweis wenn keine PowerPoint Präsentation geöffnet ist"><div class="case-meta"><strong>Keine Präsentation geöffnet</strong><span>Der Live-Modus bleibt aktiv und kann sich verbinden, sobald PowerPoint verfügbar ist</span></div></div>
+  </div>
+</section>
+
+<section class="case-section" style="padding-left:0;padding-right:0">
   <div class="eyebrow"><span></span> LIVE CONTROLLER</div>
   <div class="case-intro" style="margin-top:16px"><div class="case-copy"><h2>Während der Veranstaltung zählt Übersicht.</h2></div><div class="case-copy"><p>Der Live Controller bildet den laufenden Zustand kompakt ab: aktuelle Folie, Schüler, Song, Segment, Fortschritt und Status. Die drei Zustände zeigen den Übergang von einer deaktivierten Folie über die laufende Wiedergabe bis zu einer noch nicht konfigurierten Folie.</p></div></div>
   <div class="case-grid live-grid"><div class="case-card"><img src="assets/abicut/live 3.png" alt="AbiCut Live Controller Folie deaktiviert"><div class="case-meta"><strong>Folie deaktiviert</strong><span>Live-Status und nächste Folie</span></div></div><div class="case-card"><img src="assets/abicut/live 2.png" alt="AbiCut Live Controller Wiedergabe"><div class="case-meta"><strong>Playing</strong><span>Aktiver Song und Fortschritt während der Wiedergabe</span></div></div><div class="case-card"><img src="assets/abicut/live 1.png" alt="AbiCut Live Controller keine Konfiguration"><div class="case-meta"><strong>Keine Konfiguration</strong><span>Fehlende Vorbereitung wird direkt sichtbar</span></div></div></div>
 </section>
 
-<section class="case-section result-section" style="padding-left:0;padding-right:0"><div class="result-panel"><div class="eyebrow"><span></span> ERGEBNIS</div><h2>Eine fertige Anwendung für den realen Einsatz.</h2><p>AbiCut verbindet Softwareentwicklung, API-Integration, strukturierte Datenhaltung, Benutzeroberfläche und Live-Steuerung in einem eigenständig entwickelten System. Die Anwendung wurde fertiggestellt, praktisch eingesetzt und von der Schule bestätigt.</p><div class="tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>JSON</span><span>PowerPoint</span></div></div></section>
+<section class="case-section result-section" style="padding-left:0;padding-right:0"><div class="result-panel"><div class="eyebrow"><span></span> ERGEBNIS</div><h2>Eine vollständige Desktop-Anwendung für den realen Einsatz.</h2><p>AbiCut verbindet Softwareentwicklung, API-Integration, strukturierte Datenhaltung, Benutzeroberfläche und Live-Steuerung in einem eigenständig entwickelten System. Mit Version 1.0 verfügt die Anwendung zusätzlich über einen Windows-Installer, eigenes Branding, getrennte persistente Nutzerdaten, optionale Spotify-Konfiguration und eine robuste PowerPoint-Verbindungslogik. Die Anwendung wurde fertiggestellt und für die Übergabe an die Schule vorbereitet.</p><div class="tags"><span>Python</span><span>Spotify Web API</span><span>Tkinter</span><span>JSON</span><span>PowerPoint</span><span>PyInstaller</span><span>Inno Setup</span></div></div></section>
 
 <div class="detail-actions"><a class="btn btn-primary" href="https://github.com/leonstein2611/Abi-Cut" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a class="btn btn-ghost" href="index.html#projects">Weitere Projekte</a></div>
 </main>

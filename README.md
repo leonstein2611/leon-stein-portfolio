@@ -1,4 +1,4 @@
-# Leon Stein Portfolio — V23
+# Leon Stein Portfolio — V24
 
 - Nutzerangepasste V8-Dateien als Basis übernommen (Index, AbiCut, Future Club, Iron-Man, Styles, Script)
 - Neues Hauptprojekt „MQTT / PowerPoint“ ergänzt
@@ -68,3 +68,12 @@
 
 - V23: BoxIt nach dem erneuten MakerWorld-Upload auf den neuen Projektlink aktualisiert
 - V23: Neues BoxIt-Coverbild als Vorschaubild auf der Website eingebunden
+
+
+- V24: AbiCut auf den finalen Desktop-Stand 1.0 aktualisiert
+- V24: Windows-Installer, eigenes App-Branding und Public/School-Release-Konzept ergänzt
+- V24: PowerPoint-Verbindungsstatus mit Rot/Orange/Grün-Statuslogik dokumentiert
+- V24: Robustes Verhalten bei noch nicht geöffneter PowerPoint-Präsentation ergänzt
+- V24: Getrennte Datenstruktur zwischen Programmdateien und persistenten Nutzerdaten unter Documents\AbiCut dargestellt
+- V24: Neue Screenshots für PowerPoint-Status, Warnhinweis, Installer und Desktop-Verknüpfung eingebunden
+- V24: AbiCut-Ergebnisbereich um PyInstaller, Inno Setup, optionale Spotify-Konfiguration und persistente Projektdaten erweitert
