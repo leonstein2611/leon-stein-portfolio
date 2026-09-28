@@ -1,4 +1,4 @@
-# Leon Stein Portfolio — V24
+# Leon Stein Portfolio — V25
 
 - Nutzerangepasste V8-Dateien als Basis übernommen (Index, AbiCut, Future Club, Iron-Man, Styles, Script)
 - Neues Hauptprojekt „MQTT / PowerPoint“ ergänzt
@@ -77,3 +77,10 @@
 - V24: Getrennte Datenstruktur zwischen Programmdateien und persistenten Nutzerdaten unter Documents\AbiCut dargestellt
 - V24: Neue Screenshots für PowerPoint-Status, Warnhinweis, Installer und Desktop-Verknüpfung eingebunden
 - V24: AbiCut-Ergebnisbereich um PyInstaller, Inno Setup, optionale Spotify-Konfiguration und persistente Projektdaten erweitert
+
+- V25: Future Club Rover auf den neuen Software- und Fahrtest-Stand aktualisiert
+- V25: Eigenständig gelöste CAN-Kommunikation mit allen Motoren und Node-ID-Logik dokumentiert
+- V25: Einzelmotorsteuerung per Controller, Anrampung und erste Fahrfunktionen ergänzt
+- V25: Codebasis, Fahrlogik und Sicherheitsaspekte bei Stromausfall/Abschalten der Motoren beschrieben
+- V25: Rolle im Current-Projects-Bereich auf tutorische Begleitung statt Schülerrolle aktualisiert
+- V25: Neues Rover-Testbild für Controller- und Fahrfunktionen eingebunden
